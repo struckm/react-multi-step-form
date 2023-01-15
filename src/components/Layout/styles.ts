@@ -1,11 +1,11 @@
 import {
-  createMuiTheme,
+  createTheme,
   responsiveFontSizes,
   makeStyles
 } from '@material-ui/core/styles';
 import { cyan } from '@material-ui/core/colors';
 
-let theme = createMuiTheme({
+let theme = createTheme({
   palette: {
     type: 'dark',
     primary: cyan,
