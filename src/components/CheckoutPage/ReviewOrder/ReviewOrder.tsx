@@ -18,7 +18,7 @@ export default function ReviewOrder(props: any) {
       const parseForm = await validationSchema.validate(formValues);
       console.log('validation result', parseForm);
     } catch (e: any) {
-      console.log(e.errors);
+      alert(`Form is not valid. error: ${e.errors[0]}`);
     }
   };
 
@@ -33,10 +33,10 @@ export default function ReviewOrder(props: any) {
         <PaymentDetails formValues={formValues} />
       </Grid>
       <div>
-        <Button onClick={() => setStep(step - 1)} className={classes.button}>
-          Back
-        </Button>
         <div className={classes.wrapper}>
+          <Button onClick={() => setStep(step - 1)} className={classes.button}>
+            Back
+          </Button>
           <Button
             type="button"
             variant="contained"
