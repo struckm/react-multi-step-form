@@ -10,8 +10,8 @@ import {
   FormHelperText,
 } from '@material-ui/core';
 
-function SelectField(props) {
-  const { label, data, ...rest } = props;
+function SelectField(props: any) {
+  const { name, label, data, ...rest } = props;
   const [field, meta] = useField(props);
   const { value: selectedValue } = field;
   const [touched, error] = at(meta, 'touched', 'error');
@@ -26,7 +26,7 @@ function SelectField(props) {
     <FormControl {...rest} error={isError}>
       <InputLabel>{label}</InputLabel>
       <Select {...field} value={selectedValue ? selectedValue : ''}>
-        {data.map((item, index) => (
+        {data.map((item: any, index: number) => (
           <MenuItem key={index} value={item.value}>
             {item.label}
           </MenuItem>

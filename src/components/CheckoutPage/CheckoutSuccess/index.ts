@@ -1,2 +1,1 @@
-import CheckoutSuccess from './CheckoutSuccess';
-export default CheckoutSuccess;
+export { default as CheckoutSuccess } from './CheckoutSuccess';

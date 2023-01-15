@@ -1,11 +1,16 @@
-import React from 'react';
-import { Grid, Typography } from '@material-ui/core';
+import React, { useContext } from 'react';
+import { Grid, Typography, Button } from '@material-ui/core';
 import { InputField, DatePickerField } from '../../FormFields';
+import useStyles from '../styles';
 
 export default function PaymentForm(props: any) {
   const {
     formField: { nameOnCard, cardNumber, expiryDate, cvv },
+    step,
+    setStep,
   } = props;
+  const classes = useStyles();
+  const isLastStep = false;
 
   return (
     <React.Fragment>
@@ -42,6 +47,24 @@ export default function PaymentForm(props: any) {
           <InputField name={cvv.name} label={cvv.label} fullWidth />
         </Grid>
       </Grid>
+      <div className={classes.buttons}>
+        <Button onClick={() => setStep(step - 1)} className={classes.button}>
+          Back
+        </Button>
+        <div className={classes.wrapper}>
+          <Button
+            type="button"
+            variant="contained"
+            color="primary"
+            className={classes.button}
+            onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
+              setStep(step + 1);
+            }}
+          >
+            Next
+          </Button>
+        </div>
+      </div>
     </React.Fragment>
   );
 }

@@ -3,7 +3,7 @@ import { at } from 'lodash';
 import { useField } from 'formik';
 import { TextField } from '@material-ui/core';
 
-export default function InputField(props) {
+export default function InputField(props: any) {
   const { errorText, ...rest } = props;
   const [field, meta] = useField(props);
 

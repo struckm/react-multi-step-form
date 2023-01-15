@@ -1,6 +1,7 @@
-import React from 'react';
-import { Grid, Typography } from '@material-ui/core';
+import React, { useContext } from 'react';
+import { Grid, Typography, Button } from '@material-ui/core';
 import { InputField, CheckboxField, SelectField } from '../../FormFields';
+import useStyles from '../styles';
 
 const cities = [
   {
@@ -72,7 +73,13 @@ export default function AddressForm(props: any) {
       country,
       useAddressForPaymentDetails,
     },
+    step,
+    setStep,
   } = props;
+  const classes = useStyles();
+  const isSubmitting = false;
+  const isLastStep = false;
+
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
@@ -125,6 +132,22 @@ export default function AddressForm(props: any) {
           />
         </Grid>
       </Grid>
+      <div className={classes.buttons}>
+        <div className={classes.wrapper}>
+          <Button
+            disabled={isSubmitting}
+            type="button"
+            variant="contained"
+            color="primary"
+            className={classes.button}
+            onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
+              setStep(step + 1);
+            }}
+          >
+            Next
+          </Button>
+        </div>
+      </div>
     </React.Fragment>
   );
 }

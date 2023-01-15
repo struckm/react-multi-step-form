@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useFormikContext } from 'formik';
-import { Typography, Grid } from '@material-ui/core';
+import { Typography, Grid, Button } from '@material-ui/core';
 import ProductDetails from './ProductDetails';
 import ShippingDetails from './ShippingDetails';
 import PaymentDetails from './PaymentDetails';
+import useStyles from '../styles';
+import validationSchema from '../FormModel/validationSchema';
 
-export default function ReviewOrder() {
+export default function ReviewOrder(props: any) {
+  const { step, setStep } = props;
   const { values: formValues } = useFormikContext();
+  const classes = useStyles();
+
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    try {
+      const parseForm = await validationSchema.validate(formValues);
+      console.log('validation result', parseForm);
+    } catch (e: any) {
+      console.log(e.errors);
+    }
+  };
+
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
@@ -17,6 +32,22 @@ export default function ReviewOrder() {
         <ShippingDetails formValues={formValues} />
         <PaymentDetails formValues={formValues} />
       </Grid>
+      <div>
+        <Button onClick={() => setStep(step - 1)} className={classes.button}>
+          Back
+        </Button>
+        <div className={classes.wrapper}>
+          <Button
+            type="button"
+            variant="contained"
+            color="primary"
+            className={classes.button}
+            onClick={handleSubmit}
+          >
+            Place order
+          </Button>
+        </div>
+      </div>
     </React.Fragment>
   );
 }

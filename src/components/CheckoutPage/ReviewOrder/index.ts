@@ -1,2 +1,1 @@
-import ReviewOrder from './ReviewOrder';
-export default ReviewOrder;
+export { default as ReviewOrder } from './ReviewOrder';
