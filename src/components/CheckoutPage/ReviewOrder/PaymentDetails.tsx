@@ -3,7 +3,7 @@ import moment from 'moment';
 import { Typography, Grid } from '@material-ui/core';
 import useStyles from './styles';
 
-function PaymentDetails(props) {
+function PaymentDetails(props: any) {
   const { formValues } = props;
   const classes = useStyles();
   const { nameOnCard, cardNumber, expiryDate } = formValues;

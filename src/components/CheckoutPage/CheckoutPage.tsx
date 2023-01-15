@@ -5,7 +5,7 @@ import {
   StepLabel,
   Button,
   Typography,
-  CircularProgress
+  CircularProgress,
 } from '@material-ui/core';
 import { Formik, Form } from 'formik';
 
@@ -43,7 +43,7 @@ export default function CheckoutPage() {
   const isLastStep = activeStep === steps.length - 1;
 
   function _sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
   async function _submitForm(values, actions) {
@@ -74,7 +74,7 @@ export default function CheckoutPage() {
         Checkout
       </Typography>
       <Stepper activeStep={activeStep} className={classes.stepper}>
-        {steps.map(label => (
+        {steps.map((label) => (
           <Step key={label}>
             <StepLabel>{label}</StepLabel>
           </Step>

@@ -12,8 +12,8 @@ const {
     nameOnCard,
     cardNumber,
     expiryDate,
-    cvv
-  }
+    cvv,
+  },
 } = checkoutFormModel;
 
 const visaRegEx = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
@@ -31,11 +31,11 @@ export default [
       .test(
         'len',
         `${zipcode.invalidErrorMsg}`,
-        val => val && val.length === 5
+        (val: string) => val && val.length === 5
       ),
     [country.name]: Yup.string()
       .nullable()
-      .required(`${country.requiredErrorMsg}`)
+      .required(`${country.requiredErrorMsg}`),
   }),
   Yup.object().shape({
     [nameOnCard.name]: Yup.string().required(`${nameOnCard.requiredErrorMsg}`),
@@ -45,7 +45,7 @@ export default [
     [expiryDate.name]: Yup.string()
       .nullable()
       .required(`${expiryDate.requiredErrorMsg}`)
-      .test('expDate', expiryDate.invalidErrorMsg, val => {
+      .test('expDate', expiryDate.invalidErrorMsg, (val: string) => {
         if (val) {
           const startDate = new Date();
           const endDate = new Date(2050, 12, 31);
@@ -58,6 +58,10 @@ export default [
       }),
     [cvv.name]: Yup.string()
       .required(`${cvv.requiredErrorMsg}`)
-      .test('len', `${cvv.invalidErrorMsg}`, val => val && val.length === 3)
-  })
+      .test(
+        'len',
+        `${cvv.invalidErrorMsg}`,
+        (val: string) => val && val.length === 3
+      ),
+  }),
 ];

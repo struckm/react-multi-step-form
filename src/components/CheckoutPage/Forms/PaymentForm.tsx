@@ -2,9 +2,9 @@ import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import { InputField, DatePickerField } from '../../FormFields';
 
-export default function PaymentForm(props) {
+export default function PaymentForm(props: any) {
   const {
-    formField: { nameOnCard, cardNumber, expiryDate, cvv }
+    formField: { nameOnCard, cardNumber, expiryDate, cvv },
   } = props;
 
   return (
