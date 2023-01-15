@@ -7,7 +7,7 @@ import {
   Typography,
   CircularProgress,
 } from '@material-ui/core';
-import { Formik, Form } from 'formik';
+import { Formik, Form, FormikHelpers } from 'formik';
 
 import AddressForm from './Forms/AddressForm';
 import PaymentForm from './Forms/PaymentForm';
@@ -23,7 +23,7 @@ import useStyles from './styles';
 const steps = ['Shipping address', 'Payment details', 'Review your order'];
 const { formId, formField } = checkoutFormModel;
 
-function _renderStepContent(step) {
+function _renderStepContent(step: number) {
   switch (step) {
     case 0:
       return <AddressForm formField={formField} />;
@@ -42,11 +42,14 @@ export default function CheckoutPage() {
   const currentValidationSchema = validationSchema[activeStep];
   const isLastStep = activeStep === steps.length - 1;
 
-  function _sleep(ms) {
+  function _sleep(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
-  async function _submitForm(values, actions) {
+  async function _submitForm(
+    values: Array<string>,
+    actions: FormikHelpers<Array<string>>
+  ) {
     await _sleep(1000);
     alert(JSON.stringify(values, null, 2));
     actions.setSubmitting(false);
@@ -54,7 +57,10 @@ export default function CheckoutPage() {
     setActiveStep(activeStep + 1);
   }
 
-  function _handleSubmit(values, actions) {
+  function _handleSubmit(
+    values: Array<string>,
+    actions: FormikHelpers<Array<string>>
+  ) {
     if (isLastStep) {
       _submitForm(values, actions);
     } else {
