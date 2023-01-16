@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="GQv6DaVA4uOkgyHfXdGu" name="Page-1">
-        <mxGraphModel dx="633" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="684" dy="375" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -10,7 +10,7 @@
                 <mxCell id="Pnkz5HfRMbZ75r3Y_8Te-63" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Pnkz5HfRMbZ75r3Y_8Te-52" target="Pnkz5HfRMbZ75r3Y_8Te-58" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" style="edgeStyle=none;html=1;" edge="1" parent="1" source="Pnkz5HfRMbZ75r3Y_8Te-52" target="9">
+                <mxCell id="10" style="edgeStyle=none;html=1;" parent="1" source="Pnkz5HfRMbZ75r3Y_8Te-52" target="9" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="Pnkz5HfRMbZ75r3Y_8Te-52" value="CheckoutPage" style="text;html=1;strokeColor=default;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
@@ -22,41 +22,40 @@
                 <mxCell id="Pnkz5HfRMbZ75r3Y_8Te-58" value="Formik" style="text;html=1;strokeColor=default;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="290" y="175" width="100" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="" style="edgeStyle=none;html=1;" parent="1" source="Pnkz5HfRMbZ75r3Y_8Te-64" target="2" edge="1">
+                <mxCell id="3" value="" style="edgeStyle=none;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Pnkz5HfRMbZ75r3Y_8Te-64" target="2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="" style="edgeStyle=none;html=1;" parent="1" source="Pnkz5HfRMbZ75r3Y_8Te-64" target="4" edge="1">
+                <mxCell id="5" value="" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Pnkz5HfRMbZ75r3Y_8Te-64" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="320" y="260" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Pnkz5HfRMbZ75r3Y_8Te-64" target="6" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="" style="edgeStyle=none;html=1;" parent="1" source="Pnkz5HfRMbZ75r3Y_8Te-64" target="6" edge="1">
+                <mxCell id="18" style="edgeStyle=none;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Pnkz5HfRMbZ75r3Y_8Te-64" target="17">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="Pnkz5HfRMbZ75r3Y_8Te-64" value="Form" style="text;html=1;strokeColor=default;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="290" y="235" width="100" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="AddressForm" style="text;html=1;strokeColor=default;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="130" y="345" width="100" height="30" as="geometry"/>
+                    <mxGeometry x="100" y="345" width="100" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="PaymentForm" style="text;html=1;strokeColor=default;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="290" y="345" width="100" height="30" as="geometry"/>
+                    <mxGeometry x="240" y="345" width="100" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="6" value="ReviewOrder" style="text;html=1;strokeColor=default;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="450" y="345" width="100" height="30" as="geometry"/>
+                    <mxGeometry x="380" y="345" width="100" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" style="edgeStyle=none;html=1;" edge="1" parent="1" source="9" target="6">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="9" value="State" style="text;html=1;strokeColor=default;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="120" width="100" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="4">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="17" value="CheckoutSuccess" style="text;html=1;strokeColor=default;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="345" width="130" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" style="edgeStyle=none;html=1;entryX=0.4;entryY=0.167;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="9" target="2">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="16" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="Pnkz5HfRMbZ75r3Y_8Te-64">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="9" value="State" style="text;html=1;strokeColor=default;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="480" y="120" width="100" height="30" as="geometry"/>
+                <mxCell id="19" value="Multi Step Form" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="50" width="320" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
