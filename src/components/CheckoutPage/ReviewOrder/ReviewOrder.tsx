@@ -5,7 +5,7 @@ import ProductDetails from './ProductDetails';
 import ShippingDetails from './ShippingDetails';
 import PaymentDetails from './PaymentDetails';
 import useStyles from '../styles';
-import validationSchema from '../FormModel/validationSchema';
+import validationSchema from '../FormModel/validationSchema_yup';
 
 export default function ReviewOrder(props: any) {
   const { step, setStep } = props;

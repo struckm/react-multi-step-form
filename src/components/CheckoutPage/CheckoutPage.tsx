@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Box, Typography } from '@material-ui/core';
 import { Form, Formik, FormikHelpers } from 'formik';
 import Step from './Step';
-import validationSchema from './FormModel/validationSchema';
+import validationSchema from './FormModel/validationSchema_yup';
 import formInitialValues from './FormModel/formInitialValues';
 import checkoutFormModel from './FormModel/checkoutFormModel';
 
