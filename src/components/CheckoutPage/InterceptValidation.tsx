@@ -1,5 +1,5 @@
 // Helper styles for demo
-import './helper.css';
+// import './helper.css';
 import { MoreResources, DisplayFormikState } from './helper';
 
 import React from 'react';
@@ -7,7 +7,7 @@ import { render } from 'react-dom';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-const App = () => (
+const InterceptValidation = () => (
   <div className="app">
     <h1>
       Basic{' '}
@@ -98,4 +98,4 @@ const App = () => (
   </div>
 );
 
-render(<App />, document.getElementById('root'));
+export default InterceptValidation;

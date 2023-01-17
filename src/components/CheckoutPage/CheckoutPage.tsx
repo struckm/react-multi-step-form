@@ -5,6 +5,7 @@ import Step from './Step';
 import validationSchema from './FormModel/validationSchema_yup';
 import formInitialValues from './FormModel/formInitialValues';
 import checkoutFormModel from './FormModel/checkoutFormModel';
+import InterceptValidation from './InterceptValidation';
 
 const steps = ['Shipping address', 'Payment details', 'Review your order'];
 
@@ -59,6 +60,7 @@ export default function CheckoutPage() {
           <Step step={activeStep} setStep={setActiveStep} />
         </Form>
       </Formik>
+      {/* <InterceptValidation /> */}
     </React.Fragment>
   );
 }

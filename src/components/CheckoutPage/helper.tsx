@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const DisplayFormikState = (props) => (
+export const DisplayFormikState = (props: any) => (
   <div style={{ margin: '1rem 0' }}>
     <h3 style={{ fontFamily: 'monospace' }} />
     <pre
@@ -15,7 +15,7 @@ export const DisplayFormikState = (props) => (
   </div>
 );
 
-export const MoreResources = (props) => (
+export const MoreResources = (props: any) => (
   <div>
     <hr style={{ margin: '3rem 0' }} />
     <h3>More Examples</h3>
@@ -63,36 +63,6 @@ export const MoreResources = (props) => (
           rel="noopener"
         >
           Accessing Lifecyle Methods (resetting a form externally)
-        </a>
-      </li>
-    </ul>
-    <h3 style={{ marginTop: '1rem' }}>Additional Resources</h3>
-    <ul>
-      <li>
-        <a
-          href="https://github.com/jaredpalmer/formik"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub Repo
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/jaredpalmer/formik/issues"
-          target="_blank"
-          rel="noopener"
-        >
-          Issues
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/jaredpalmer"
-          target="_blank"
-          rel="noopener"
-        >
-          Twitter (@jaredpalmer)
         </a>
       </li>
     </ul>
